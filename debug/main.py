@@ -27,7 +27,7 @@ def split_before(iterable, pred, maxsplit=-1):
     """Yield lists of items from *iterable*, where each list ends just before
     an item for which callable *pred* returns ``True``:
 
-    Note!! This function does not contain a bug
+    Note!! This function does NOT contain a bug
     """
     if maxsplit == 0:
         yield list(iterable)
@@ -48,7 +48,7 @@ def split_before(iterable, pred, maxsplit=-1):
         yield buf
 
 
-def is_header(line):
+def is_header(line: str):
     """Returns True if line in .fa file is header of new sequence."""
     return line.startswith(">")
 

@@ -64,7 +64,7 @@ def compute_highest_gc_content(fasta_data: list[str]):
     for seq_lines in sequences:
         header = seq_lines[0].strip(">")
         seq = "".join(seq_lines)
-        gc_count = seq.count("G") + seq.count("C")
+        gc_count = seq.count("G") + seq.count("С")
         current_gc = round(100 * gc_count / len(seq), 6)
         if current_gc > max_gc:
             max_gc = current_gc

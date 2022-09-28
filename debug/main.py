@@ -48,6 +48,13 @@ def split_before(iterable, pred, maxsplit=-1):
         yield buf
 
 
+#####################################################################
+# Code above this line can be safely ignored.
+# It does not contain a bug.
+# It's included because it nicely simplifies the rest of the problem.
+#####################################################################
+
+
 def is_header(line: str):
     """Returns True if line in .fa file is header of new sequence."""
     return line.startswith(">")
@@ -88,4 +95,8 @@ def run(input_path: str):
 
 
 if __name__ == "__main__":
-    run(sys.argv[1])
+    run("small_data.txt")
+    # If you want to run this as a script,
+    # where you can pass the path to the fasta file as a command line argument,
+    # you can use the following line instead of using the one above this comment.
+    # run(sys.argv[1])
